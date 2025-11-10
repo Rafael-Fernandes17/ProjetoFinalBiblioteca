@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/home/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Biblioteca</h1>
+    </header>
+
+    <form id= "meuFormulario" action="script.js" method="POST">
+        <label>Título Livro: </label>
+        <input id="titulo" type="text" name="titulo" required>
+
+        <label>Autor: </label>
+        <input id="autor" type="text" name="autor" required>
+
+        <label>ISBN: </label>
+        <input id="ISBN" type="number" name="ISBN" required>
+
+        <label>Ano de Publicação: </label>
+        <input id="anoPublicacao" type="number" name="anoPublicacao" required>
+
+        <div id="caixaParaBotao">
+                <button type="submit" form="meuFormulario" id="botao">Cadastrar Livro</button>
+        </div>
+    </form> 
+
+    <p id="mensagens"></p>
+
+    <button type="submit">Ler Livros (Read)</button>
+    <button>Atualizar Livros (Update)</button>
+    <button>Deletar Livros (Delete)</button>
+
+
+<script src="script.js"></script>
+</body>
+</html>
