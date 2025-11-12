@@ -45,6 +45,10 @@ a {
     color: rgb(176, 4, 4);
 }
 
+#mensagens {
+    display: none;
+}
+
 h1 {
     font-family: "Archivo Black", sans-serif;
     grid-row: 2;
