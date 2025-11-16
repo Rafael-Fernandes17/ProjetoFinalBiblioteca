@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — Sistema de Biblioteca</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Sistema de Biblioteca</h1>
+    <nav>
+      <a href="/home/home.html"><p>Home</p></a>
+      <a href="/sobre/sobre.html"><p>Sobre</p></a>
+      <a href="/catalogo/catalogo.html"><p>Catálogo</p></a>
+      <a href="/contato/contato.html"><p>Contato</p></a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="card contato-card">
+      <h2>Fale conosco</h2>
+      <p class="lead">Preencha o formulário abaixo para entrar em contato, responderemos em breve.</p>
+      <form id="formContato" novalidate>
+        <label>Nome</label>
+        <input type="text" id="nome" placeholder="Ex: João">
+        <small class="erro"></small>
+
+        <label>Sobrenome</label>
+        <input type="text" id="sobrenome" placeholder="Ex: da Silva">
+        <small class="erro"></small>
+
+        <label>Idade</label>
+        <input type="number" id="idade" placeholder="Ex: 25">
+        <small class="erro"></small>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="aaa@exemplo.com">
+        <small class="erro"></small>
+
+        <label>Mensagem</label>
+        <textarea id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+        <small class="erro"></small>
+
+        <div class="caixa-botao">
+          <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+        </div>
+
+        <p id="sucesso" class="sucesso"></p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <small>© Sistema de Biblioteca — Criado por Felipe e Rafael | BSI.</small>
+  </footer>
+
+  <script src="contato.js"></script>
+
+</body>
+</html>

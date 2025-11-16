@@ -4,47 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <title>Formulário</title>
 </head>
 
-<body>
+<body id="bodyHome">
 
-    <header>
+    <header class="site-header">
         <h1>Sistema de Biblioteca</h1>
+
         <nav>
-            <a href="sobre.html"><p>Sobre</p></a>
-            <a href="catalogo.html"><p>Catálogo de Livros</p></a>
-            <a href="contato.html"><p>Contato</p></a>
+        <a href="/home/home.html"><p>Home</p></a>
+        <a href="/sobre/sobre.html"><p>Sobre</p></a>
+        <a href="/catalogo/catalogo.html"><p>Catálogo</p></a>
+        <a href="/contato/contato.html"><p>Contato</p></a>
         </nav>
-    </header>
+     </header>
 
-    <form id= "meuFormulario" method="POST">
-        <label>Título Livro: </label>
-        <input id="titulo" type="text" name="titulo" required>
+    <main id="mainHome">
+        <form id= "meuFormulario" method="POST">
+            <label>Título Livro: </label>
+            <input id="titulo" type="text" name="titulo" required>
+            <p id="mensagemTitulo"></p>
 
-        <label>Autor: </label>
-        <input id="autor" type="text" name="autor" required>
+            <label>Autor: </label>
+            <input id="autor" type="text" name="autor" required>
 
-        <label>ISBN: </label>
-        <input id="ISBN" type="number" name="ISBN" required>
+            <label>ISBN: </label>
+            <input id="isbn" type="number" name="ISBN" required>
+            <p id="mensagemIsbn"></p>
 
-        <label>Ano de Publicação: </label>
-        <input id="anoPublicacao" type="number" name="anoPublicacao" required>
+            <label>Ano de Publicação: </label>
+            <input id="anoPublicacao" type="number" name="anoPublicacao" required>
+            <p id="mensagemAno"></p>
 
-        <div id="caixaParaBotao">
-                <button type="submit" form="meuFormulario" id="botao">Cadastrar Livro</button>
-        </div>
-    </form> 
+            <div id="caixaLabel">
+                <label for="fotoCapa" class="botao-personalizado">Escolher Imagem</label>
+            </div> 
 
-    <p id="mensagens"></p>
+            <input type="file" id="fotoCapa" name="fotoCapa" accept="image/*" class="input-escondido" required>
+            <p id="mensagemFoto"></p>
 
-    <button type="submit" id="readBtn">Ler Livros (Read)</button>
-    <button>Atualizar Livros (Update)</button>
-    <button>Deletar Livros (Delete)</button>
+            <div id="caixaParaBotao">
+                    <button type="submit" form="meuFormulario" id="botao">Cadastrar Livro</button>
+            </div>
+        </form> 
 
+        <p id="mensagens"></p>
+        <button id="updateBtn">Atualizar Livros</button>
+        <button id="deleteBtn">Deletar Livros</button>
+    </main>
 
-<script src="home.js"></script>
+    <footer class="rodape">
+        <small>© Sistema de Biblioteca — Criado por Felipe e Rafael | BSI.</small>
+  </footer>
+<script src="/script.js"></script>
 </body>
 </html>

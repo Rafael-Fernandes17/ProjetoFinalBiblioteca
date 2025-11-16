@@ -1,0 +1,145 @@
+:root {
+  --bg: antiquewhite;
+  --accent: rgb(176, 4, 4);
+  --accent-dark: rgb(120, 3, 3);
+  --card: #fff3d9;
+  --muted: #000000aa;
+  --max-w: 1000px;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--bg);
+}
+
+/* header */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  width: 100%;
+  height: 150px;
+  background-color: var(--accent);
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.site-header h1 {
+  grid-row: 2;
+  grid-column: 1/-1;
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+  color: #f5f7fa;
+}
+
+nav {
+  grid-row: 3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  border-bottom: 2px solid var(--accent);
+  height: 34px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a p {
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+
+.conteudo {
+  max-width: var(--max-w);
+  margin: 26px auto;
+  padding: 0 18px 48px 18px;
+  display: grid;
+  gap: 18px;
+}
+
+h2, h3, h4 {
+  color: #111;
+  font-weight: 800;
+}
+
+body, p, li {
+  color: #222;
+  font-weight: 500;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 18px;
+}
+.hero .lead {
+  color: #333;
+  line-height: 1.5;
+}
+
+
+.card {
+  background: var(--card);
+  border: 2px solid rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.trinca {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+}
+.trinca .card p { color: #333; }
+
+
+.recursos ul {
+  margin-left: 18px;
+}
+
+.team-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.team-contact ul { margin-left: 18px; }
+
+.cta { text-align: center; }
+
+.botao-acao {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--accent);
+  color: #f5f7fa;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: "Archivo Black", sans-serif;
+  border: 2px solid black;
+}
+.botao-acao:hover {
+  background: var(--accent-dark);
+}
+
+.rodape {
+  margin-top: 18px;
+  text-align: center;
+  color: #333;
+  padding: 12px 0;
+}
+
+@media (max-width: 800px) {
+  .trinca { grid-template-columns: 1fr; }
+  .team-contact { grid-template-columns: 1fr; }
+}

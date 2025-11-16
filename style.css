@@ -1,0 +1,318 @@
+:root {
+    --bg: antiquewhite;
+    --accent: rgb(176, 4, 4);
+    --accent-dark: rgb(120, 3, 3);
+    --card: #fff3d9;
+    --muted: #000000aa;
+    --max-w: 1000px;
+}
+
+html,body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--bg);
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    width: 100%;
+    height: 150px;
+    background-color: var(--accent);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.site-header h1 {
+    font-family: "Archivo Black", sans-serif;
+    grid-row: 2;
+    grid-column: 1/-1;
+    margin: 0;
+    font-size: 2rem;
+    color: #f5f7fa;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-row: 3;
+    grid-column: 1/-1;
+    background-color: antiquewhite;
+    border-bottom: 4px solid var(--accent);
+    height: 34px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a p {
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+}
+
+a {
+    font-family: "Archivo Black", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(176, 4, 4);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
+
+#mainHome {
+    height: 100%;
+}
+
+#mensagens {
+    display: none;
+}
+
+#mensagemTitulo, #mensagemIsbn, #mensagemAno{
+    grid-column: 1/-1;
+    display: none;
+    color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    grid-row: 2;
+    grid-column: 1/-1;
+    font-size: 200%;
+    color: aliceblue;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    min-height: 320px;
+    height: auto;
+    width: 40%;
+    background-color: #fff3d9;
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+form p {
+    grid-column: 1 / -1; 
+    margin: 0;
+    font-size: 12px;
+    color: red;
+    text-transform: uppercase;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 30px;
+    border: 1px solid rgb(69, 68, 68);
+    border-radius: 5px;
+}
+
+#caixaParaBotao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+button {
+    font-family: "Archivo Black", sans-serif;
+    width: 30%;
+    height: 50px;
+    background-color: rgb(176, 4, 4);
+    color: rgb(216, 219, 222);
+    text-transform: uppercase;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(120, 3, 3);
+}
+
+.rodape {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+    padding: 12px 0;
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+#catalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    padding: 30px;
+    margin: 25px;
+    border-radius: 30px;
+    background-color: rgb(176, 4, 4);
+}
+
+#catalogoMensagem {
+    font-family: "Archivo Black", sans-serif;
+    justify-content: center; /* Quando for mudado no JS*/
+    align-items: center; /* Quando for mudado no JS*/
+    text-align: center;
+    font-size: 200%;
+    color: aliceblue;
+    text-transform: uppercase;
+    display: block;
+}
+
+#catalogoMain {
+    height: auto;
+    flex-grow: 1;
+}
+
+#catalogo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#catalogo th {
+    border:1px solid;
+    background-color: rgb(176, 4, 4);;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#catalogo td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Linhas pares */
+#catalogo tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#catalogo tr:hover {
+  background-color: #ddd;
+}
+
+.input-escondido {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.botao-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50px;
+    margin: 5px;
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: rgb(216, 219, 222);;
+    background-color: rgb(176, 4, 4);
+    font-size: 16px;
+
+}
+
+.botao-personalizado:hover {
+    background-color: rgb(120, 3, 3);
+}
+
+#caixaLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    .site-header {
+        height: 120px; 
+    }
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+
+
+    form {
+        width: 90%; 
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    
+    form label {
+        grid-column: 1 / -1;
+    }
+    form input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .botao-personalizado {
+        width: 50%;
+    }
+
+    #catalogo {
+        width: 95%;
+        padding: 15px 5px;
+        margin: 15px auto;
+    }
+    
+    #catalogo table, 
+    #catalogo th, 
+    #catalogo td {
+        font-size: 12px;
+    }
+    
+    #catalogo table {
+        display: block;
+        overflow-x: auto; 
+        white-space: nowrap;
+    }
+}

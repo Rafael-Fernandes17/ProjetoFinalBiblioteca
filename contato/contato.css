@@ -1,0 +1,156 @@
+:root {
+  --bg: antiquewhite;
+  --accent: rgb(176, 4, 4);
+  --accent-dark: rgb(120, 3, 3);
+  --card: #fff3d9;
+  --muted: #000000aa;
+  --max-w: 1000px;
+}
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Courier New", monospace;
+}
+
+/* header */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 150px;
+  width: 100%;
+  background-color: var(--accent);
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.site-header h1 {
+  grid-row: 2;
+  grid-column: 1/-1;
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+nav {
+  grid-row: 3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 34px;
+  background: antiquewhite;
+  border-bottom: 2px solid var(--accent);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a p {
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* conteudo */
+
+.conteudo {
+  max-width: var(--max-w);
+  margin: 26px auto;
+  padding: 0 18px 48px 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 22px;
+  border: 2px solid rgba(0,0,0,0.12);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.lead {
+  margin-top: 6px;
+  color: #333;
+}
+
+label {
+  font-weight: 700;
+  color: #111;
+  margin-top: 12px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.caixa-botao {
+  display: flex;
+  justify-content: center;
+}
+
+#btnEnviar {
+  font-family: "Archivo Black", sans-serif;
+  margin-top: 20px;
+  width: 60%;
+  height: 48px;
+  background: var(--accent);
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btnEnviar:hover {
+  background: var(--accent-dark);
+}
+
+.erro {
+  color: red;
+  min-height: 18px;
+  font-size: 0.9rem;
+}
+
+.sucesso {
+  margin-top: 14px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+.rodape {
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+  padding: 12px 0;
+}
+
+/* responsividade */
+@media (max-width: 600px) {
+  #btnEnviar {
+    width: 100%;
+  }
+}
